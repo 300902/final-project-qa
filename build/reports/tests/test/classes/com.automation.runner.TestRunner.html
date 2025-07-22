@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - TestRunner</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>TestRunner</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.automation.runner.html">com.automation.runner</a> &gt; TestRunner</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">17</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">50.597s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">Add product to cart on SauceDemo - Add an existing product to cart</td>
+<td class="success">3.226s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Add product to cart on SauceDemo - Attempt to checkout with empty cart</td>
+<td class="success">22.951s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Checkout flow on SauceDemo - Full checkout process and logout</td>
+<td class="success">7.236s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">SauceDemo Website Login - Failed login with empty credentials</td>
+<td class="success">2.632s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">SauceDemo Website Login - Failed login with invalid password</td>
+<td class="success">3.258s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">SauceDemo Website Login - Failed login with invalid username</td>
+<td class="success">3.340s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">SauceDemo Website Login - Successful login with valid credentials</td>
+<td class="success">3.251s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">User API Testing - Create new user with valid payload - Positive Test</td>
+<td class="success">0.436s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">User API Testing - Create user with invalid email format - Negative Test</td>
+<td class="success">0.439s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">User API Testing - Create user with invalid payload - Negative Test</td>
+<td class="success">0.386s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">User API Testing - Delete user with invalid ID - Negative Test</td>
+<td class="success">0.366s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">User API Testing - Delete user with valid ID - Negative Test</td>
+<td class="success">0.418s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">User API Testing - Get all tags - Positive Test</td>
+<td class="success">1.366s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">User API Testing - Get user by invalid ID - Negative Test</td>
+<td class="success">0.176s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">User API Testing - Get user by valid ID - Positive Test</td>
+<td class="success">0.379s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">User API Testing - Update user with invalid ID - Negative Test</td>
+<td class="success">0.363s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">User API Testing - Update user with valid ID and payload - Negative Test</td>
+<td class="success">0.374s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>
+@api @positive
+Scenario: Get user by valid ID - Positive Test            ?[90m# features/api/user.feature:10?[0m
+  ?[32mGiven ?[0m?[32mthe DummyAPI base URL is set?[0m                      ?[90m# com.automation.steps.api.UserApiSteps.setBaseUrl()?[0m
+  ?[32mGiven ?[0m?[32mI have a valid user ID ?[0m?[32m?[1m&quot;60d0fe4f5311236168a10a01&quot;?[0m ?[90m# com.automation.steps.api.UserApiSteps.setValidUserId(java.lang.String)?[0m
+  ?[32mWhen ?[0m?[32mI send a GET request to get user by ID?[0m             ?[90m# com.automation.steps.api.UserApiSteps.getUserById()?[0m
+  ?[32mThen ?[0m?[32mthe response status code should be ?[0m?[32m?[1m200?[0m             ?[90m# com.automation.steps.api.UserApiSteps.verifyStatusCode(int)?[0m
+âœ… Response validation passed
+  ?[32mAnd ?[0m?[32mthe response should contain user details?[0m            ?[90m# com.automation.steps.api.UserApiSteps.verifyUserDetails()?[0m
+
+@api @negative
+Scenario: Get user by invalid ID - Negative Test ?[90m# features/api/user.feature:17?[0m
+  ?[32mGiven ?[0m?[32mthe DummyAPI base URL is set?[0m             ?[90m# com.automation.steps.api.UserApiSteps.setBaseUrl()?[0m
+  ?[32mGiven ?[0m?[32mI have an invalid user ID ?[0m?[32m?[1m&quot;invalid123&quot;?[0m   ?[90m# com.automation.steps.api.UserApiSteps.setInvalidUserId(java.lang.String)?[0m
+  ?[32mWhen ?[0m?[32mI send a GET request to get user by ID?[0m    ?[90m# com.automation.steps.api.UserApiSteps.getUserById()?[0m
+  ?[32mThen ?[0m?[32mthe response status code should be ?[0m?[32m?[1m404?[0m    ?[90m# com.automation.steps.api.UserApiSteps.verifyStatusCode(int)?[0m
+âœ… Error response validation passed
+  ?[32mAnd ?[0m?[32mthe response should contain error message?[0m  ?[90m# com.automation.steps.api.UserApiSteps.verifyErrorMessage()?[0m
+
+@api @positive
+Scenario: Create new user with valid payload - Positive Test ?[90m# features/api/user.feature:24?[0m
+  ?[32mGiven ?[0m?[32mthe DummyAPI base URL is set?[0m                         ?[90m# com.automation.steps.api.UserApiSteps.setBaseUrl()?[0m
+  ?[32mGiven ?[0m?[32mI have a valid user payload?[0m                          ?[90m# com.automation.steps.api.UserApiSteps.setValidUserPayload(io.cucumber.datatable.DataTable)?[0m
+    | firstName | lastName | email                |
+    | John      | Doe      | john.doe@example.com |
+  ?[32mWhen ?[0m?[32mI send a POST request to create user?[0m                  ?[90m# com.automation.steps.api.UserApiSteps.createUserStep()?[0m
+  ?[32mThen ?[0m?[32mthe response status code should be ?[0m?[32m?[1m200?[0m                ?[90m# com.automation.steps.api.UserApiSteps.verifyStatusCode(int)?[0m
+âœ… User creation validation passed
+  ?[32mAnd ?[0m?[32mthe response should contain the created user details?[0m   ?[90m# com.automation.steps.api.UserApiSteps.verifyCreatedUserDetails()?[0m
+
+@api @negative
+Scenario: Create user with invalid payload - Negative Test ?[90m# features/api/user.feature:33?[0m
+  ?[32mGiven ?[0m?[32mthe DummyAPI base URL is set?[0m                       ?[90m# com.automation.steps.api.UserApiSteps.setBaseUrl()?[0m
+  ?[32mGiven ?[0m?[32mI have an invalid user payload?[0m                     ?[90m# com.automation.steps.api.UserApiSteps.iHaveAnInvalidUserPayload()?[0m
+  ?[32mWhen ?[0m?[32mI send a POST request to create user?[0m                ?[90m# com.automation.steps.api.UserApiSteps.createUserStep()?[0m
+  ?[32mThen ?[0m?[32mthe response status code should be ?[0m?[32m?[1m400?[0m              ?[90m# com.automation.steps.api.UserApiSteps.verifyStatusCode(int)?[0m
+âœ… Validation error response validation passed
+  ?[32mAnd ?[0m?[32mthe response should contain validation error?[0m         ?[90m# com.automation.steps.api.UserApiSteps.verifyValidationError()?[0m
+
+@api @negative
+Scenario: Create user with invalid email format - Negative Test            ?[90m# features/api/user.feature:40?[0m
+  ?[32mGiven ?[0m?[32mthe DummyAPI base URL is set?[0m                                       ?[90m# com.automation.steps.api.UserApiSteps.setBaseUrl()?[0m
+  ?[32mWhen ?[0m?[32mI create a new user with name ?[0m?[32m?[1m&quot;Test User&quot;?[0m?[32m and email ?[0m?[32m?[1m&quot;invalid-email&quot;?[0m ?[90m# com.automation.steps.api.UserApiSteps.createNewUserWithNameAndEmail(java.lang.String,java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mthe response status code should be ?[0m?[32m?[1m400?[0m                              ?[90m# com.automation.steps.api.UserApiSteps.verifyStatusCode(int)?[0m
+âœ… Validation error response validation passed
+  ?[32mAnd ?[0m?[32mthe response should contain validation error?[0m                         ?[90m# com.automation.steps.api.UserApiSteps.verifyValidationError()?[0m
+
+@api @negative
+Scenario: Update user with valid ID and payload - Negative Test ?[90m# features/api/user.feature:46?[0m
+  ?[32mGiven ?[0m?[32mthe DummyAPI base URL is set?[0m                            ?[90m# com.automation.steps.api.UserApiSteps.setBaseUrl()?[0m
+  ?[32mAnd ?[0m?[32mI have a valid update payload?[0m                             ?[90m# com.automation.steps.api.UserApiSteps.setValidUpdatePayload(io.cucumber.datatable.DataTable)?[0m
+    | firstName | lastName |
+    | Jane      | Smith    |
+[DEBUG] Updating user with ID: null
+  ?[32mWhen ?[0m?[32mI send a PUT request to update user?[0m                      ?[90m# com.automation.steps.api.UserApiSteps.updateUserStep()?[0m
+  ?[32mThen ?[0m?[32mthe response status code should be ?[0m?[32m?[1m400?[0m                   ?[90m# com.automation.steps.api.UserApiSteps.verifyStatusCode(int)?[0m
+âœ… Error response validation passed
+  ?[32mAnd ?[0m?[32mthe response should contain error message?[0m                 ?[90m# com.automation.steps.api.UserApiSteps.verifyErrorMessage()?[0m
+
+@api @negative
+Scenario: Update user with invalid ID - Negative Test ?[90m# features/api/user.feature:56?[0m
+  ?[32mGiven ?[0m?[32mthe DummyAPI base URL is set?[0m                  ?[90m# com.automation.steps.api.UserApiSteps.setBaseUrl()?[0m
+  ?[32mGiven ?[0m?[32mI have an invalid user ID ?[0m?[32m?[1m&quot;invalid123&quot;?[0m        ?[90m# com.automation.steps.api.UserApiSteps.setInvalidUserId(java.lang.String)?[0m
+  ?[32mAnd ?[0m?[32mI have a valid update payload?[0m                   ?[90m# com.automation.steps.api.UserApiSteps.setValidUpdatePayload(io.cucumber.datatable.DataTable)?[0m
+    | firstName | lastName |
+    | Jane      | Smith    |
+[DEBUG] Updating user with ID: invalid123
+  ?[32mWhen ?[0m?[32mI send a PUT request to update user?[0m            ?[90m# com.automation.steps.api.UserApiSteps.updateUserStep()?[0m
+  ?[32mThen ?[0m?[32mthe response status code should be ?[0m?[32m?[1m400?[0m         ?[90m# com.automation.steps.api.UserApiSteps.verifyStatusCode(int)?[0m
+âœ… Error response validation passed
+  ?[32mAnd ?[0m?[32mthe response should contain error message?[0m       ?[90m# com.automation.steps.api.UserApiSteps.verifyErrorMessage()?[0m
+
+@api @negative
+Scenario: Delete user with valid ID - Negative Test ?[90m# features/api/user.feature:66?[0m
+  ?[32mGiven ?[0m?[32mthe DummyAPI base URL is set?[0m                ?[90m# com.automation.steps.api.UserApiSteps.setBaseUrl()?[0m
+[DEBUG] Deleting user with ID: null
+  ?[32mWhen ?[0m?[32mI send a DELETE request to delete user?[0m       ?[90m# com.automation.steps.api.UserApiSteps.deleteUserStep()?[0m
+  ?[32mThen ?[0m?[32mthe response status code should be ?[0m?[32m?[1m400?[0m       ?[90m# com.automation.steps.api.UserApiSteps.verifyStatusCode(int)?[0m
+âœ… Error response validation passed
+  ?[32mAnd ?[0m?[32mthe response should contain error message?[0m     ?[90m# com.automation.steps.api.UserApiSteps.verifyErrorMessage()?[0m
+
+@api @negative
+Scenario: Delete user with invalid ID - Negative Test ?[90m# features/api/user.feature:73?[0m
+  ?[32mGiven ?[0m?[32mthe DummyAPI base URL is set?[0m                  ?[90m# com.automation.steps.api.UserApiSteps.setBaseUrl()?[0m
+  ?[32mGiven ?[0m?[32mI have an invalid user ID ?[0m?[32m?[1m&quot;invalid123&quot;?[0m        ?[90m# com.automation.steps.api.UserApiSteps.setInvalidUserId(java.lang.String)?[0m
+[DEBUG] Deleting user with ID: invalid123
+  ?[32mWhen ?[0m?[32mI send a DELETE request to delete user?[0m         ?[90m# com.automation.steps.api.UserApiSteps.deleteUserStep()?[0m
+  ?[32mThen ?[0m?[32mthe response status code should be ?[0m?[32m?[1m400?[0m         ?[90m# com.automation.steps.api.UserApiSteps.verifyStatusCode(int)?[0m
+âœ… Error response validation passed
+  ?[32mAnd ?[0m?[32mthe response should contain error message?[0m       ?[90m# com.automation.steps.api.UserApiSteps.verifyErrorMessage()?[0m
+
+@api @positive
+Scenario: Get all tags - Positive Test         ?[90m# features/api/user.feature:80?[0m
+  ?[32mGiven ?[0m?[32mthe DummyAPI base URL is set?[0m           ?[90m# com.automation.steps.api.UserApiSteps.setBaseUrl()?[0m
+  ?[32mWhen ?[0m?[32mI send a GET request to get all tags?[0m    ?[90m# com.automation.steps.api.UserApiSteps.getAllTags()?[0m
+  ?[32mThen ?[0m?[32mthe response status code should be ?[0m?[32m?[1m200?[0m  ?[90m# com.automation.steps.api.UserApiSteps.verifyStatusCode(int)?[0m
+âœ… Tags list validation passed
+  ?[32mAnd ?[0m?[32mthe response should contain list of tags?[0m ?[90m# com.automation.steps.api.UserApiSteps.verifyTagsList()?[0m
+
+@web @positive
+Scenario: Add an existing product to cart      ?[90m# features/web/cart.feature:6?[0m
+[INFO] Setting up ChromeDriver...
+[INFO] ChromeDriver setup complete.
+[INFO] ChromeDriver started successfully.
+  ?[32mGiven ?[0m?[32mUser is logged in to SauceDemo?[0m         ?[90m# com.automation.steps.web.CartSteps.userIsLoggedIn()?[0m
+  ?[32mWhen ?[0m?[32mUser adds the first product to the cart?[0m ?[90m# com.automation.steps.web.CartSteps.userAddsFirstProduct()?[0m
+  ?[32mThen ?[0m?[32mCart badge shows 1 item?[0m                 ?[90m# com.automation.steps.web.CartSteps.cartBadgeShowsOne()?[0m
+
+@web @negative
+Scenario: Attempt to checkout with empty cart    ?[90m# features/web/cart.feature:11?[0m
+[INFO] Setting up ChromeDriver...
+[INFO] ChromeDriver setup complete.
+[INFO] ChromeDriver started successfully.
+  ?[32mGiven ?[0m?[32mUser is logged in to SauceDemo?[0m           ?[90m# com.automation.steps.web.CartSteps.userIsLoggedIn()?[0m
+  ?[32mWhen ?[0m?[32mUser clicks the cart icon with empty cart?[0m ?[90m# com.automation.steps.web.CartSteps.userClicksCartEmpty()?[0m
+  ?[32mAnd ?[0m?[32mUser proceeds to checkout?[0m                  ?[90m# com.automation.steps.web.CartSteps.userProceedsToCheckout()?[0m
+  ?[32mThen ?[0m?[32mUser sees error message for empty cart?[0m    ?[90m# com.automation.steps.web.CartSteps.userSeesEmptyCartError()?[0m
+
+@web @positive
+Scenario: Full checkout process and logout                                    ?[90m# features/web/checkout.feature:7?[0m
+[INFO] Setting up ChromeDriver...
+[INFO] ChromeDriver setup complete.
+[INFO] ChromeDriver started successfully.
+  ?[32mGiven ?[0m?[32mI am on the SauceDemo login page?[0m                                      ?[90m# com.automation.steps.web.LoginSteps.openLoginPage()?[0m
+  ?[32mAnd ?[0m?[32mI have valid username ?[0m?[32m?[1m&quot;standard_user&quot;?[0m?[32m and password ?[0m?[32m?[1m&quot;secret_sauce&quot;?[0m       ?[90m# com.automation.steps.web.CheckoutSteps.setCredentials(java.lang.String,java.lang.String)?[0m
+  ?[32mWhen ?[0m?[32mI login with valid credentials?[0m                                         ?[90m# com.automation.steps.web.CheckoutSteps.loginWithValidCredentials()?[0m
+  ?[32mAnd ?[0m?[32mI open the menu?[0m                                                         ?[90m# com.automation.steps.web.CheckoutSteps.openMenu()?[0m
+  ?[32mThen ?[0m?[32mthe Logout link should be visible?[0m                                      ?[90m# com.automation.steps.web.CheckoutSteps.verifyLogoutLink()?[0m
+  ?[32mAnd ?[0m?[32mI should see the page title ?[0m?[32m?[1m&quot;Products&quot;?[0m                                  ?[90m# com.automation.steps.web.CheckoutSteps.verifyTitle(java.lang.String)?[0m
+  ?[32mWhen ?[0m?[32mI navigate to the first product detail page?[0m                            ?[90m# com.automation.steps.web.CheckoutSteps.goToFirstProductDetail()?[0m
+  ?[32mThen ?[0m?[32mI should see the product name on detail page?[0m                           ?[90m# com.automation.steps.web.CheckoutSteps.verifyProductNameOnDetail()?[0m
+  ?[32mWhen ?[0m?[32mI add the product to the cart?[0m                                          ?[90m# com.automation.steps.web.CheckoutSteps.addProductToCart()?[0m
+  ?[32mThen ?[0m?[32mI should see a ?[0m?[32m?[1m&quot;Remove&quot;?[0m?[32m button for that product?[0m                        ?[90m# com.automation.steps.web.CheckoutSteps.verifyButtonText(java.lang.String)?[0m
+  ?[32mWhen ?[0m?[32mI go to the cart page?[0m                                                  ?[90m# com.automation.steps.web.CheckoutSteps.goToCart()?[0m
+  ?[32mThen ?[0m?[32mI should see the product ?[0m?[32m?[1m&quot;Sauce Labs Backpack&quot;?[0m?[32m in the cart?[0m             ?[90m# com.automation.steps.web.CheckoutSteps.verifyProductInCart(java.lang.String)?[0m
+  ?[32mWhen ?[0m?[32mI click the checkout button?[0m                                            ?[90m# com.automation.steps.web.CheckoutSteps.clickCheckout()?[0m
+  ?[32mThen ?[0m?[32mI should be on the checkout information page?[0m                           ?[90m# com.automation.steps.web.CheckoutSteps.verifyCheckoutPage()?[0m
+  ?[32mWhen ?[0m?[32mI enter first name ?[0m?[32m?[1m&quot;Jan&quot;?[0m?[32m and last name ?[0m?[32m?[1m&quot;Novak&quot;?[0m?[32m and postal code ?[0m?[32m?[1m&quot;10400&quot;?[0m ?[90m# com.automation.steps.web.CheckoutSteps.fillCheckoutInformation(java.lang.String,java.lang.String,java.lang.String)?[0m
+  ?[32mAnd ?[0m?[32mI continue to the overview page?[0m                                         ?[90m# com.automation.steps.web.CheckoutSteps.continueToOverview()?[0m
+  ?[32mThen ?[0m?[32mI should be on the checkout overview page?[0m                              ?[90m# com.automation.steps.web.CheckoutSteps.verifyOverviewPage()?[0m
+  ?[32mAnd ?[0m?[32mI should see the product ?[0m?[32m?[1m&quot;Sauce Labs Backpack&quot;?[0m?[32m in overview?[0m              ?[90m# com.automation.steps.web.CheckoutSteps.verifyProductInOverview(java.lang.String)?[0m
+  ?[32mWhen ?[0m?[32mI logout from the application?[0m                                          ?[90m# com.automation.steps.web.CheckoutSteps.logout()?[0m
+  ?[32mThen ?[0m?[32mI should be on the login page?[0m                                          ?[90m# com.automation.steps.web.CheckoutSteps.verifyOnLoginPage()?[0m
+
+@web @positive
+Scenario: Successful login with valid credentials ?[90m# features/web/login.feature:10?[0m
+[INFO] Setting up ChromeDriver...
+[INFO] ChromeDriver setup complete.
+[INFO] ChromeDriver started successfully.
+  ?[32mGiven ?[0m?[32mI am on the SauceDemo login page?[0m          ?[90m# com.automation.steps.web.LoginSteps.openLoginPage()?[0m
+  ?[32mWhen ?[0m?[32mI enter username ?[0m?[32m?[1m&quot;standard_user&quot;?[0m           ?[90m# com.automation.steps.web.LoginSteps.enterUsername(java.lang.String)?[0m
+  ?[32mAnd ?[0m?[32mI enter password ?[0m?[32m?[1m&quot;secret_sauce&quot;?[0m             ?[90m# com.automation.steps.web.LoginSteps.enterPassword(java.lang.String)?[0m
+  ?[32mAnd ?[0m?[32mI click the login button?[0m                    ?[90m# com.automation.steps.web.LoginSteps.clickLogin()?[0m
+  ?[32mThen ?[0m?[32mI should be on the Products page?[0m           ?[90m# com.automation.steps.web.LoginSteps.verifyOnProductsPage()?[0m
+  ?[32mAnd ?[0m?[32mI should see a title ?[0m?[32m?[1m&quot;Products&quot;?[0m             ?[90m# com.automation.steps.web.LoginSteps.verifyTitle(java.lang.String)?[0m
+
+@web @negative
+Scenario: Failed login with invalid username ?[90m# features/web/login.feature:18?[0m
+[INFO] Setting up ChromeDriver...
+[INFO] ChromeDriver setup complete.
+[INFO] ChromeDriver started successfully.
+  ?[32mGiven ?[0m?[32mI am on the SauceDemo login page?[0m     ?[90m# com.automation.steps.web.LoginSteps.openLoginPage()?[0m
+  ?[32mWhen ?[0m?[32mI enter username ?[0m?[32m?[1m&quot;invalid_user&quot;?[0m       ?[90m# com.automation.steps.web.LoginSteps.enterUsername(java.lang.String)?[0m
+  ?[32mAnd ?[0m?[32mI enter password ?[0m?[32m?[1m&quot;secret_sauce&quot;?[0m        ?[90m# com.automation.steps.web.LoginSteps.enterPassword(java.lang.String)?[0m
+  ?[32mAnd ?[0m?[32mI click the login button?[0m               ?[90m# com.automation.steps.web.LoginSteps.clickLogin()?[0m
+  ?[32mThen ?[0m?[32mI should see login error message?[0m      ?[90m# com.automation.steps.web.LoginSteps.verifyLoginError()?[0m
+  ?[32mAnd ?[0m?[32mI should still be on the login page?[0m    ?[90m# com.automation.steps.web.LoginSteps.verifyStillOnLoginPage()?[0m
+
+@web @negative
+Scenario: Failed login with invalid password ?[90m# features/web/login.feature:26?[0m
+[INFO] Setting up ChromeDriver...
+[INFO] ChromeDriver setup complete.
+[INFO] ChromeDriver started successfully.
+  ?[32mGiven ?[0m?[32mI am on the SauceDemo login page?[0m     ?[90m# com.automation.steps.web.LoginSteps.openLoginPage()?[0m
+  ?[32mWhen ?[0m?[32mI enter username ?[0m?[32m?[1m&quot;standard_user&quot;?[0m      ?[90m# com.automation.steps.web.LoginSteps.enterUsername(java.lang.String)?[0m
+  ?[32mAnd ?[0m?[32mI enter password ?[0m?[32m?[1m&quot;wrong_password&quot;?[0m      ?[90m# com.automation.steps.web.LoginSteps.enterPassword(java.lang.String)?[0m
+  ?[32mAnd ?[0m?[32mI click the login button?[0m               ?[90m# com.automation.steps.web.LoginSteps.clickLogin()?[0m
+  ?[32mThen ?[0m?[32mI should see login error message?[0m      ?[90m# com.automation.steps.web.LoginSteps.verifyLoginError()?[0m
+  ?[32mAnd ?[0m?[32mI should still be on the login page?[0m    ?[90m# com.automation.steps.web.LoginSteps.verifyStillOnLoginPage()?[0m
+
+@web @negative
+Scenario: Failed login with empty credentials ?[90m# features/web/login.feature:34?[0m
+[INFO] Setting up ChromeDriver...
+[INFO] ChromeDriver setup complete.
+[INFO] ChromeDriver started successfully.
+  ?[32mGiven ?[0m?[32mI am on the SauceDemo login page?[0m      ?[90m# com.automation.steps.web.LoginSteps.openLoginPage()?[0m
+  ?[32mWhen ?[0m?[32mI clear username field?[0m                 ?[90m# com.automation.steps.web.LoginSteps.clearUsername()?[0m
+  ?[32mAnd ?[0m?[32mI clear password field?[0m                  ?[90m# com.automation.steps.web.LoginSteps.clearPassword()?[0m
+  ?[32mAnd ?[0m?[32mI click the login button?[0m                ?[90m# com.automation.steps.web.LoginSteps.clickLogin()?[0m
+  ?[32mThen ?[0m?[32mI should see validation error message?[0m  ?[90m# com.automation.steps.web.LoginSteps.verifyValidationError()?[0m
+</pre>
+</span>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>Jul 22, 2025 9:37:03 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 138
+Jul 22, 2025 9:37:03 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 138.0.7204.158. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Jul 22, 2025 9:37:04 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 138
+Jul 22, 2025 9:37:04 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 138.0.7204.158. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Jul 22, 2025 9:37:05 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 138
+Jul 22, 2025 9:37:05 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 138.0.7204.158. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Jul 22, 2025 9:37:06 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 138
+Jul 22, 2025 9:37:06 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 138.0.7204.158. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Jul 22, 2025 9:37:07 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 138
+Jul 22, 2025 9:37:07 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 138.0.7204.158. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Jul 22, 2025 9:37:07 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 138
+Jul 22, 2025 9:37:07 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 138.0.7204.158. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Jul 22, 2025 9:37:29 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 138
+Jul 22, 2025 9:37:29 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 138.0.7204.158. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Jul 22, 2025 9:37:30 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 138
+Jul 22, 2025 9:37:30 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 138.0.7204.158. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Jul 22, 2025 9:37:31 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 138
+Jul 22, 2025 9:37:31 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 138.0.7204.158. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Jul 22, 2025 9:37:36 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 138
+Jul 22, 2025 9:37:36 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 138.0.7204.158. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Jul 22, 2025 9:37:37 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 138
+Jul 22, 2025 9:37:37 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 138.0.7204.158. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Jul 22, 2025 9:37:38 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 138
+Jul 22, 2025 9:37:38 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 138.0.7204.158. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Jul 22, 2025 9:37:40 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 138
+Jul 22, 2025 9:37:40 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 138.0.7204.158. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Jul 22, 2025 9:37:40 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 138
+Jul 22, 2025 9:37:40 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 138.0.7204.158. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Jul 22, 2025 9:37:41 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 138
+Jul 22, 2025 9:37:41 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 138.0.7204.158. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Jul 22, 2025 9:37:43 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 138
+Jul 22, 2025 9:37:43 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 138.0.7204.158. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Jul 22, 2025 9:37:44 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 138
+Jul 22, 2025 9:37:44 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 138.0.7204.158. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Jul 22, 2025 9:37:44 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 138
+Jul 22, 2025 9:37:44 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 138.0.7204.158. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Jul 22, 2025 9:37:46 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 138
+Jul 22, 2025 9:37:46 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 138.0.7204.158. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Jul 22, 2025 9:37:47 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 138
+Jul 22, 2025 9:37:47 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 138.0.7204.158. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Jul 22, 2025 9:37:47 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 138
+Jul 22, 2025 9:37:47 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 138.0.7204.158. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.15.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+?[32m?[1m??????????????????????????????????????????????????????????????????????????????????????[0m
+?[32m?[1m??[0m Share your Cucumber Report with your team at ?[36m?[1m?[4mhttps://reports.cucumber.io?[0m          ?[32m?[1m??[0m
+?[32m?[1m??[0m Activate publishing with one of the following:                                    ?[32m?[1m??[0m
+?[32m?[1m??[0m                                                                                   ?[32m?[1m??[0m
+?[32m?[1m??[0m src/test/resources/cucumber.properties:          ?[36mcucumber.publish.enabled?[0m=?[36mtrue?[0m    ?[32m?[1m??[0m
+?[32m?[1m??[0m src/test/resources/junit-platform.properties:    ?[36mcucumber.publish.enabled?[0m=?[36mtrue?[0m    ?[32m?[1m??[0m
+?[32m?[1m??[0m Environment variable:                            ?[36mCUCUMBER_PUBLISH_ENABLED?[0m=?[36mtrue?[0m    ?[32m?[1m??[0m
+?[32m?[1m??[0m JUnit:                                           ?[36m@CucumberOptions?[0m(publish = ?[36mtrue?[0m) ?[32m?[1m??[0m
+?[32m?[1m??[0m                                                                                   ?[32m?[1m??[0m
+?[32m?[1m??[0m More information at ?[36mhttps://cucumber.io/docs/cucumber/environment-variables/?[0m      ?[32m?[1m??[0m
+?[32m?[1m??[0m                                                                                   ?[32m?[1m??[0m
+?[32m?[1m??[0m Disable this message with one of the following:                                   ?[32m?[1m??[0m
+?[32m?[1m??[0m                                                                                   ?[32m?[1m??[0m
+?[32m?[1m??[0m src/test/resources/cucumber.properties:          ?[36mcucumber.publish.quiet?[0m=?[36mtrue?[0m      ?[32m?[1m??[0m
+?[32m?[1m??[0m src/test/resources/junit-platform.properties:    ?[36mcucumber.publish.quiet?[0m=?[36mtrue?[0m      ?[32m?[1m??[0m
+?[32m?[1m??????????????????????????????????????????????????????????????????????????????????????[0m
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.4</a> at Jul 22, 2025, 9:38:32 AM</p>
+</div>
+</div>
+</body>
+</html>

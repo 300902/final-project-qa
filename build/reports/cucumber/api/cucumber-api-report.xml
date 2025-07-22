@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="6.082" tests="10" skipped="0" failures="0" errors="0">
+<testcase classname="User API Testing" name="Get user by valid ID - Positive Test" time="1.869">
+<system-out><![CDATA[
+Given the DummyAPI base URL is set..........................................passed
+Given I have a valid user ID "60d0fe4f5311236168a10a01".....................passed
+When I send a GET request to get user by ID.................................passed
+Then the response status code should be 200.................................passed
+And the response should contain user details................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User API Testing" name="Get user by invalid ID - Negative Test" time="0.188">
+<system-out><![CDATA[
+Given the DummyAPI base URL is set..........................................passed
+Given I have an invalid user ID "invalid123"................................passed
+When I send a GET request to get user by ID.................................passed
+Then the response status code should be 404.................................passed
+And the response should contain error message...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="User API Testing" name="Create new user with valid payload - Positive Test" time="0.455">
+<system-out><![CDATA[
+Given the DummyAPI base URL is set..........................................passed
+Given I have a valid user payload...........................................passed
+When I send a POST request to create user...................................passed
+Then the response status code should be 200.................................passed
+And the response should contain the created user details....................passed
+]]></system-out>
+</testcase>
+<testcase classname="User API Testing" name="Create user with invalid payload - Negative Test" time="0.353">
+<system-out><![CDATA[
+Given the DummyAPI base URL is set..........................................passed
+Given I have an invalid user payload........................................passed
+When I send a POST request to create user...................................passed
+Then the response status code should be 400.................................passed
+And the response should contain validation error............................passed
+]]></system-out>
+</testcase>
+<testcase classname="User API Testing" name="Create user with invalid email format - Negative Test" time="0.37">
+<system-out><![CDATA[
+Given the DummyAPI base URL is set..........................................passed
+When I create a new user with name "Test User" and email "invalid-email"....passed
+Then the response status code should be 400.................................passed
+And the response should contain validation error............................passed
+]]></system-out>
+</testcase>
+<testcase classname="User API Testing" name="Update user with valid ID and payload - Negative Test" time="0.37">
+<system-out><![CDATA[
+Given the DummyAPI base URL is set..........................................passed
+And I have a valid update payload...........................................passed
+When I send a PUT request to update user....................................passed
+Then the response status code should be 400.................................passed
+And the response should contain error message...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="User API Testing" name="Update user with invalid ID - Negative Test" time="0.359">
+<system-out><![CDATA[
+Given the DummyAPI base URL is set..........................................passed
+Given I have an invalid user ID "invalid123"................................passed
+And I have a valid update payload...........................................passed
+When I send a PUT request to update user....................................passed
+Then the response status code should be 400.................................passed
+And the response should contain error message...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="User API Testing" name="Delete user with valid ID - Negative Test" time="0.355">
+<system-out><![CDATA[
+Given the DummyAPI base URL is set..........................................passed
+When I send a DELETE request to delete user.................................passed
+Then the response status code should be 400.................................passed
+And the response should contain error message...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="User API Testing" name="Delete user with invalid ID - Negative Test" time="0.355">
+<system-out><![CDATA[
+Given the DummyAPI base URL is set..........................................passed
+Given I have an invalid user ID "invalid123"................................passed
+When I send a DELETE request to delete user.................................passed
+Then the response status code should be 400.................................passed
+And the response should contain error message...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="User API Testing" name="Get all tags - Positive Test" time="1.236">
+<system-out><![CDATA[
+Given the DummyAPI base URL is set..........................................passed
+When I send a GET request to get all tags...................................passed
+Then the response status code should be 200.................................passed
+And the response should contain list of tags................................passed
+]]></system-out>
+</testcase>
+</testsuite>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.automation.runner.ApiTestRunner" tests="10" skipped="0" failures="0" errors="0" timestamp="2025-07-22T02:36:52" hostname="DESKTOP-2UB34OT" time="6.019">
+  <properties/>
+  <testcase name="User API Testing - Get user by valid ID - Positive Test" classname="com.automation.runner.ApiTestRunner" time="1.945"/>
+  <testcase name="User API Testing - Get user by invalid ID - Negative Test" classname="com.automation.runner.ApiTestRunner" time="0.193"/>
+  <testcase name="User API Testing - Create new user with valid payload - Positive Test" classname="com.automation.runner.ApiTestRunner" time="0.459"/>
+  <testcase name="User API Testing - Create user with invalid payload - Negative Test" classname="com.automation.runner.ApiTestRunner" time="0.356"/>
+  <testcase name="User API Testing - Create user with invalid email format - Negative Test" classname="com.automation.runner.ApiTestRunner" time="0.372"/>
+  <testcase name="User API Testing - Update user with valid ID and payload - Negative Test" classname="com.automation.runner.ApiTestRunner" time="0.376"/>
+  <testcase name="User API Testing - Update user with invalid ID - Negative Test" classname="com.automation.runner.ApiTestRunner" time="0.362"/>
+  <testcase name="User API Testing - Delete user with valid ID - Negative Test" classname="com.automation.runner.ApiTestRunner" time="0.357"/>
+  <testcase name="User API Testing - Delete user with invalid ID - Negative Test" classname="com.automation.runner.ApiTestRunner" time="0.357"/>
+  <testcase name="User API Testing - Get all tags - Positive Test" classname="com.automation.runner.ApiTestRunner" time="1.239"/>
+  <system-out><![CDATA[
+@api @positive
+Scenario: Get user by valid ID - Positive Test            ?[90m# features/api/user.feature:10?[0m
+  ?[32mGiven ?[0m?[32mthe DummyAPI base URL is set?[0m                      ?[90m# com.automation.steps.api.UserApiSteps.setBaseUrl()?[0m
+  ?[32mGiven ?[0m?[32mI have a valid user ID ?[0m?[32m?[1m"60d0fe4f5311236168a10a01"?[0m ?[90m# com.automation.steps.api.UserApiSteps.setValidUserId(java.lang.String)?[0m
+  ?[32mWhen ?[0m?[32mI send a GET request to get user by ID?[0m             ?[90m# com.automation.steps.api.UserApiSteps.getUserById()?[0m
+  ?[32mThen ?[0m?[32mthe response status code should be ?[0m?[32m?[1m200?[0m             ?[90m# com.automation.steps.api.UserApiSteps.verifyStatusCode(int)?[0m
+âœ… Response validation passed
+  ?[32mAnd ?[0m?[32mthe response should contain user details?[0m            ?[90m# com.automation.steps.api.UserApiSteps.verifyUserDetails()?[0m
+
+@api @negative
+Scenario: Get user by invalid ID - Negative Test ?[90m# features/api/user.feature:17?[0m
+  ?[32mGiven ?[0m?[32mthe DummyAPI base URL is set?[0m             ?[90m# com.automation.steps.api.UserApiSteps.setBaseUrl()?[0m
+  ?[32mGiven ?[0m?[32mI have an invalid user ID ?[0m?[32m?[1m"invalid123"?[0m   ?[90m# com.automation.steps.api.UserApiSteps.setInvalidUserId(java.lang.String)?[0m
+  ?[32mWhen ?[0m?[32mI send a GET request to get user by ID?[0m    ?[90m# com.automation.steps.api.UserApiSteps.getUserById()?[0m
+  ?[32mThen ?[0m?[32mthe response status code should be ?[0m?[32m?[1m404?[0m    ?[90m# com.automation.steps.api.UserApiSteps.verifyStatusCode(int)?[0m
+âœ… Error response validation passed
+  ?[32mAnd ?[0m?[32mthe response should contain error message?[0m  ?[90m# com.automation.steps.api.UserApiSteps.verifyErrorMessage()?[0m
+
+@api @positive
+Scenario: Create new user with valid payload - Positive Test ?[90m# features/api/user.feature:24?[0m
+  ?[32mGiven ?[0m?[32mthe DummyAPI base URL is set?[0m                         ?[90m# com.automation.steps.api.UserApiSteps.setBaseUrl()?[0m
+  ?[32mGiven ?[0m?[32mI have a valid user payload?[0m                          ?[90m# com.automation.steps.api.UserApiSteps.setValidUserPayload(io.cucumber.datatable.DataTable)?[0m
+    | firstName | lastName | email                |
+    | John      | Doe      | john.doe@example.com |
+  ?[32mWhen ?[0m?[32mI send a POST request to create user?[0m                  ?[90m# com.automation.steps.api.UserApiSteps.createUserStep()?[0m
+  ?[32mThen ?[0m?[32mthe response status code should be ?[0m?[32m?[1m200?[0m                ?[90m# com.automation.steps.api.UserApiSteps.verifyStatusCode(int)?[0m
+âœ… User creation validation passed
+  ?[32mAnd ?[0m?[32mthe response should contain the created user details?[0m   ?[90m# com.automation.steps.api.UserApiSteps.verifyCreatedUserDetails()?[0m
+
+@api @negative
+Scenario: Create user with invalid payload - Negative Test ?[90m# features/api/user.feature:33?[0m
+  ?[32mGiven ?[0m?[32mthe DummyAPI base URL is set?[0m                       ?[90m# com.automation.steps.api.UserApiSteps.setBaseUrl()?[0m
+  ?[32mGiven ?[0m?[32mI have an invalid user payload?[0m                     ?[90m# com.automation.steps.api.UserApiSteps.iHaveAnInvalidUserPayload()?[0m
+  ?[32mWhen ?[0m?[32mI send a POST request to create user?[0m                ?[90m# com.automation.steps.api.UserApiSteps.createUserStep()?[0m
+  ?[32mThen ?[0m?[32mthe response status code should be ?[0m?[32m?[1m400?[0m              ?[90m# com.automation.steps.api.UserApiSteps.verifyStatusCode(int)?[0m
+âœ… Validation error response validation passed
+  ?[32mAnd ?[0m?[32mthe response should contain validation error?[0m         ?[90m# com.automation.steps.api.UserApiSteps.verifyValidationError()?[0m
+
+@api @negative
+Scenario: Create user with invalid email format - Negative Test            ?[90m# features/api/user.feature:40?[0m
+  ?[32mGiven ?[0m?[32mthe DummyAPI base URL is set?[0m                                       ?[90m# com.automation.steps.api.UserApiSteps.setBaseUrl()?[0m
+  ?[32mWhen ?[0m?[32mI create a new user with name ?[0m?[32m?[1m"Test User"?[0m?[32m and email ?[0m?[32m?[1m"invalid-email"?[0m ?[90m# com.automation.steps.api.UserApiSteps.createNewUserWithNameAndEmail(java.lang.String,java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mthe response status code should be ?[0m?[32m?[1m400?[0m                              ?[90m# com.automation.steps.api.UserApiSteps.verifyStatusCode(int)?[0m
+âœ… Validation error response validation passed
+  ?[32mAnd ?[0m?[32mthe response should contain validation error?[0m                         ?[90m# com.automation.steps.api.UserApiSteps.verifyValidationError()?[0m
+
+@api @negative
+Scenario: Update user with valid ID and payload - Negative Test ?[90m# features/api/user.feature:46?[0m
+  ?[32mGiven ?[0m?[32mthe DummyAPI base URL is set?[0m                            ?[90m# com.automation.steps.api.UserApiSteps.setBaseUrl()?[0m
+  ?[32mAnd ?[0m?[32mI have a valid update payload?[0m                             ?[90m# com.automation.steps.api.UserApiSteps.setValidUpdatePayload(io.cucumber.datatable.DataTable)?[0m
+    | firstName | lastName |
+    | Jane      | Smith    |
+[DEBUG] Updating user with ID: null
+  ?[32mWhen ?[0m?[32mI send a PUT request to update user?[0m                      ?[90m# com.automation.steps.api.UserApiSteps.updateUserStep()?[0m
+  ?[32mThen ?[0m?[32mthe response status code should be ?[0m?[32m?[1m400?[0m                   ?[90m# com.automation.steps.api.UserApiSteps.verifyStatusCode(int)?[0m
+âœ… Error response validation passed
+  ?[32mAnd ?[0m?[32mthe response should contain error message?[0m                 ?[90m# com.automation.steps.api.UserApiSteps.verifyErrorMessage()?[0m
+
+@api @negative
+Scenario: Update user with invalid ID - Negative Test ?[90m# features/api/user.feature:56?[0m
+  ?[32mGiven ?[0m?[32mthe DummyAPI base URL is set?[0m                  ?[90m# com.automation.steps.api.UserApiSteps.setBaseUrl()?[0m
+  ?[32mGiven ?[0m?[32mI have an invalid user ID ?[0m?[32m?[1m"invalid123"?[0m        ?[90m# com.automation.steps.api.UserApiSteps.setInvalidUserId(java.lang.String)?[0m
+  ?[32mAnd ?[0m?[32mI have a valid update payload?[0m                   ?[90m# com.automation.steps.api.UserApiSteps.setValidUpdatePayload(io.cucumber.datatable.DataTable)?[0m
+    | firstName | lastName |
+    | Jane      | Smith    |
+[DEBUG] Updating user with ID: invalid123
+  ?[32mWhen ?[0m?[32mI send a PUT request to update user?[0m            ?[90m# com.automation.steps.api.UserApiSteps.updateUserStep()?[0m
+  ?[32mThen ?[0m?[32mthe response status code should be ?[0m?[32m?[1m400?[0m         ?[90m# com.automation.steps.api.UserApiSteps.verifyStatusCode(int)?[0m
+âœ… Error response validation passed
+  ?[32mAnd ?[0m?[32mthe response should contain error message?[0m       ?[90m# com.automation.steps.api.UserApiSteps.verifyErrorMessage()?[0m
+
+@api @negative
+Scenario: Delete user with valid ID - Negative Test ?[90m# features/api/user.feature:66?[0m
+  ?[32mGiven ?[0m?[32mthe DummyAPI base URL is set?[0m                ?[90m# com.automation.steps.api.UserApiSteps.setBaseUrl()?[0m
+[DEBUG] Deleting user with ID: null
+  ?[32mWhen ?[0m?[32mI send a DELETE request to delete user?[0m       ?[90m# com.automation.steps.api.UserApiSteps.deleteUserStep()?[0m
+  ?[32mThen ?[0m?[32mthe response status code should be ?[0m?[32m?[1m400?[0m       ?[90m# com.automation.steps.api.UserApiSteps.verifyStatusCode(int)?[0m
+âœ… Error response validation passed
+  ?[32mAnd ?[0m?[32mthe response should contain error message?[0m     ?[90m# com.automation.steps.api.UserApiSteps.verifyErrorMessage()?[0m
+
+@api @negative
+Scenario: Delete user with invalid ID - Negative Test ?[90m# features/api/user.feature:73?[0m
+  ?[32mGiven ?[0m?[32mthe DummyAPI base URL is set?[0m                  ?[90m# com.automation.steps.api.UserApiSteps.setBaseUrl()?[0m
+  ?[32mGiven ?[0m?[32mI have an invalid user ID ?[0m?[32m?[1m"invalid123"?[0m        ?[90m# com.automation.steps.api.UserApiSteps.setInvalidUserId(java.lang.String)?[0m
+[DEBUG] Deleting user with ID: invalid123
+  ?[32mWhen ?[0m?[32mI send a DELETE request to delete user?[0m         ?[90m# com.automation.steps.api.UserApiSteps.deleteUserStep()?[0m
+  ?[32mThen ?[0m?[32mthe response status code should be ?[0m?[32m?[1m400?[0m         ?[90m# com.automation.steps.api.UserApiSteps.verifyStatusCode(int)?[0m
+âœ… Error response validation passed
+  ?[32mAnd ?[0m?[32mthe response should contain error message?[0m       ?[90m# com.automation.steps.api.UserApiSteps.verifyErrorMessage()?[0m
+
+@api @positive
+Scenario: Get all tags - Positive Test         ?[90m# features/api/user.feature:80?[0m
+  ?[32mGiven ?[0m?[32mthe DummyAPI base URL is set?[0m           ?[90m# com.automation.steps.api.UserApiSteps.setBaseUrl()?[0m
+  ?[32mWhen ?[0m?[32mI send a GET request to get all tags?[0m    ?[90m# com.automation.steps.api.UserApiSteps.getAllTags()?[0m
+  ?[32mThen ?[0m?[32mthe response status code should be ?[0m?[32m?[1m200?[0m  ?[90m# com.automation.steps.api.UserApiSteps.verifyStatusCode(int)?[0m
+âœ… Tags list validation passed
+  ?[32mAnd ?[0m?[32mthe response should contain list of tags?[0m ?[90m# com.automation.steps.api.UserApiSteps.verifyTagsList()?[0m
+]]></system-out>
+  <system-err><![CDATA[SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+?[32m?[1m??????????????????????????????????????????????????????????????????????????????????????[0m
+?[32m?[1m??[0m Share your Cucumber Report with your team at ?[36m?[1m?[4mhttps://reports.cucumber.io?[0m          ?[32m?[1m??[0m
+?[32m?[1m??[0m Activate publishing with one of the following:                                    ?[32m?[1m??[0m
+?[32m?[1m??[0m                                                                                   ?[32m?[1m??[0m
+?[32m?[1m??[0m src/test/resources/cucumber.properties:          ?[36mcucumber.publish.enabled?[0m=?[36mtrue?[0m    ?[32m?[1m??[0m
+?[32m?[1m??[0m src/test/resources/junit-platform.properties:    ?[36mcucumber.publish.enabled?[0m=?[36mtrue?[0m    ?[32m?[1m??[0m
+?[32m?[1m??[0m Environment variable:                            ?[36mCUCUMBER_PUBLISH_ENABLED?[0m=?[36mtrue?[0m    ?[32m?[1m??[0m
+?[32m?[1m??[0m JUnit:                                           ?[36m@CucumberOptions?[0m(publish = ?[36mtrue?[0m) ?[32m?[1m??[0m
+?[32m?[1m??[0m                                                                                   ?[32m?[1m??[0m
+?[32m?[1m??[0m More information at ?[36mhttps://cucumber.io/docs/cucumber/environment-variables/?[0m      ?[32m?[1m??[0m
+?[32m?[1m??[0m                                                                                   ?[32m?[1m??[0m
+?[32m?[1m??[0m Disable this message with one of the following:                                   ?[32m?[1m??[0m
+?[32m?[1m??[0m                                                                                   ?[32m?[1m??[0m
+?[32m?[1m??[0m src/test/resources/cucumber.properties:          ?[36mcucumber.publish.quiet?[0m=?[36mtrue?[0m      ?[32m?[1m??[0m
+?[32m?[1m??[0m src/test/resources/junit-platform.properties:    ?[36mcucumber.publish.quiet?[0m=?[36mtrue?[0m      ?[32m?[1m??[0m
+?[32m?[1m??????????????????????????????????????????????????????????????????????????????????????[0m
+]]></system-err>
+</testsuite>

@@ -22,9 +22,18 @@ public class LoginSteps {
 
     @Before("@web")
     public void setUp() {
+        System.out.println("[INFO] Setting up ChromeDriver...");
         WebDriverManager.chromedriver().setup();
+        // Logging ChromeDriver setup only
+        System.out.println("[INFO] ChromeDriver setup complete.");
         ChromeOptions options = new ChromeOptions().addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage");
-        driver = new ChromeDriver(options);
+        try {
+            driver = new ChromeDriver(options);
+            System.out.println("[INFO] ChromeDriver started successfully.");
+        } catch (Exception e) {
+            System.err.println("[ERROR] Failed to start ChromeDriver: " + e.getMessage());
+            throw e;
+        }
     }
 
     @After("@web")
