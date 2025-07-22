@@ -2,6 +2,7 @@ package com.automation.runner;
 
 import org.junit.platform.suite.api.ConfigurationParameter;
 import org.junit.platform.suite.api.IncludeEngines;
+import org.junit.platform.suite.api.IncludeTags;
 import org.junit.platform.suite.api.SelectClasspathResource;
 import org.junit.platform.suite.api.Suite;
 
@@ -10,6 +11,7 @@ import io.cucumber.junit.platform.engine.Constants;
 @Suite
 @IncludeEngines("cucumber")
 @SelectClasspathResource("features/web")
+@IncludeTags("web")
 @ConfigurationParameter(key = Constants.PLUGIN_PROPERTY_NAME, 
                        value = "pretty," +
                                "html:build/reports/cucumber/web/cucumber-web-report.html," +

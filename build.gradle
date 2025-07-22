@@ -29,16 +29,22 @@ test {
 
 
 
-tasks.register('apiTest') {
-    dependsOn test
-    doFirst {
-        System.setProperty("cucumber.filter.tags", "@api")
+tasks.register('apiTest', Test) {
+    useJUnitPlatform {
+        includeTags 'api'
     }
+    filter {
+        excludeTestsMatching 'com.automation.runner.WebTestRunner'
+    }
+    systemProperty "cucumber.plugin", "html:build/reports/cucumber/api-report.html"
 }
 
-tasks.register('uiTest') {
-    dependsOn test
-    doFirst {
-        System.setProperty("cucumber.filter.tags", "@ui")
+tasks.register('uiTest', Test) {
+    useJUnitPlatform {
+        includeTags 'web'
     }
+    filter {
+        excludeTestsMatching 'com.automation.runner.ApiTestRunner'
+    }
+    systemProperty "cucumber.plugin", "html:build/reports/cucumber/ui-report.html"
 }
